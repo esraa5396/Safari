@@ -1,0 +1,101 @@
+/* .pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+.pagination .page{
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: var(--primary-text-color);
+}
+
+.pagination .page.previous,
+.pagination .page.next{
+    width: max-content;
+    padding: 0 10px;
+}
+
+.page.previous{
+    border-radius: 7px 0 0 7px;
+}
+
+.page.next{
+    border-radius: 0 7px 7px 0;
+}
+
+.next:disabled,
+.previous:disabled{
+    cursor: not-allowed;
+}
+
+.active{
+    background-color: var(--orange-color);
+    color: white;
+} */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: #f7f7f7; /* add a light gray background */
+    border-radius: 10px; /* add a subtle border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* add a faint box shadow */
+}
+
+.pagination .page {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid gray;
+    color: var(--primary-text-color);
+    transition: background-color 0.2s ease-in-out; /* add a smooth transition effect */
+}
+
+.pagination .page.previous,
+.pagination .page.next {
+    width: max-content;
+    padding: 0 10px;
+}
+
+.page.previous {
+    border-radius: 7px 0 0 7px;
+}
+
+.page.next {
+    border-radius: 0 7px 7px 0;
+}
+
+.next:disabled,
+.previous:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* add a subtle opacity effect to disabled buttons */
+}
+
+.active {
+    background-color: var(--orange-color);
+    transform: scale(1.1); /* add a slight scale effect to the active page */
+}
+
+/* add some hover effects to the page buttons */
+.pagination .page:hover {
+    background-color: #f2f2f2;
+}
+
+.pagination .page.active:hover {
+    background-color: var(--orange-color);
+}

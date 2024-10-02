@@ -1,0 +1,101 @@
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    padding: 0px 30px;
+
+}
+
+/* Logo */
+.logo{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img{
+    width: 60px;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text b{
+    color: var(--orange-color);
+}
+
+/* Navbar */
+.navbar-links{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link{
+    margin: 0px 17px;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    transition: color 0.2s ease-in-out; /* added transition effect */
+    text-decoration: none;
+}
+
+.navbar-link i{
+    margin-right: 4px;
+}
+
+.navbar-link:hover{
+    color: var(--orange-color);
+    transform: scale(1.1); /* added scale effect on hover */
+}
+
+
+/* Header Menu */
+.header-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.header-menu:hover{
+    color: var(--orange-color);
+    transform: scale(1.1);
+}
+
+/* Media Quaries */
+@media(max-width: 720px){
+    .header{
+        justify-content: space-between;
+    }
+
+    .header-menu{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 1s ease;
+    }
+
+    .navbar-links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 50px;
+    }
+
+    .navbar-link{
+        margin: 15px 0;
+    }
+}
